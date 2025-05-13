@@ -1,12 +1,8 @@
-{ config, pkgs, lib, ... }: {
+{ ... }: {
   homebrew = {
     enable = true;
-    global = {
-      autoUpdate = true;
-    };
-    onActivation = {
-      cleanup = "uninstall";
-    };
+    global = { autoUpdate = true; };
+    onActivation = { cleanup = "uninstall"; };
     brews = [
       "nushell"
       "eza"
@@ -47,7 +43,6 @@
       "discord"
       "firefox"
       "flowvision"
-      "flutter"
       "google-chrome"
       "iina"
       "iterm2"
@@ -87,14 +82,11 @@
       "tuist"
     ];
 
-
     taps = [
       "bufbuild/buf"
       "codecrafters-io/tap"
       "felixkratz/formulae"
       "homebrew/autoupdate"
-      "homebrew/bundle"
-      "homebrew/services"
       "mistertea/et"
       "netdcy/flowvision"
       "nikitabobko/tap"
