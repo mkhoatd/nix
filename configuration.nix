@@ -1,5 +1,6 @@
 # This file contains the main system configuration options
 { self, config, pkgs, lib, ... }: {
+  imports = [ ./homebrew.nix ];
       nix.enable = false;
       nixpkgs.config.allowUnfree = true;
       networking.computerName = "mackhoa";
@@ -42,113 +43,6 @@
 
       # Enable alternative shell support in nix-darwin.
       programs.fish.enable = true;
-
-      homebrew = {
-        enable = true;
-        global = {
-          autoUpdate = true;
-        };
-        onActivation = {
-          cleanup = "uninstall";
-        };
-        brews = [
-          "nushell"
-          "eza"
-          "go"
-          "dlv"
-          "rust"
-          "mas"
-          "opam"
-          "hg"
-          "darcs"
-          "bun"
-          "aria2"
-          "fish"
-          "carapace"
-          "ffmpeg"
-          "direnv"
-          "terraform"
-          "typst"
-          "ncdu"
-          "ninja"
-          "turnkey"
-          "neovim"
-          "uv"
-          "yt-dlp"
-          "ipatool"
-          "pyenv"
-        ];
-        casks = [
-          "neovide"
-          "1password-cli"
-          "git-credential-manager"
-          "steamcmd"
-          "miniforge"
-          "adguard"
-          "applite"
-          "arc"
-          "cloudflare-warp"
-          "discord"
-          "firefox"
-          "flowvision"
-          "flutter"
-          "google-chrome"
-          "iina"
-          "iterm2"
-          "karabiner-elements"
-          "kodi"
-          "jetbrains-toolbox"
-          "lookaway"
-          "messenger"
-          "microsoft-auto-update"
-          "microsoft-remote-desktop"
-          "microsoft-teams"
-          "motrix"
-          "mountain-duck"
-          "netnewswire"
-          "notion"
-          "obs"
-          "obsidian"
-          "orbstack"
-          "orion"
-          "postman"
-          "qq"
-          "rapidapi"
-          "cursor"
-          "visual-studio-code"
-          "raycast"
-          "sf-symbols"
-          "slack"
-          "steam"
-          "transmission"
-          "wezterm@nightly"
-          "zalo"
-          "zed"
-          "zoom"
-          "cursor"
-          "logi-options+"
-          "ghostty"
-          "tuist"
-        ];
-
-
-        taps = [
-          "bufbuild/buf"
-          "codecrafters-io/tap"
-          "felixkratz/formulae"
-          "homebrew/autoupdate"
-          "homebrew/bundle"
-          "homebrew/services"
-          "mistertea/et"
-          "netdcy/flowvision"
-          "nikitabobko/tap"
-          "oven-sh/bun"
-          "stackedpr/stacker"
-          "tkhq/tap"
-          "tuist/tuist"
-          "majd/repo"
-        ];
-      };
 
       system.defaults = {
         finder = {
