@@ -15,6 +15,7 @@
     # Build darwin flake using:
     # $ darwin-rebuild switch --flake .#simple
     darwinConfigurations."mackhoa" = nix-darwin.lib.darwinSystem {
+      specialArgs = { inherit self inputs; };
       modules = [ 
         (import ./configuration.nix)
         nix-homebrew.darwinModules.nix-homebrew

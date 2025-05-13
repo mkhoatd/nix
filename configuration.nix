@@ -1,5 +1,5 @@
 # This file contains the main system configuration options
-{ config, pkgs, lib,... }: {
+{ self, config, pkgs, lib, ... }: {
       nix.enable = false;
       nixpkgs.config.allowUnfree = true;
       networking.computerName = "mackhoa";
