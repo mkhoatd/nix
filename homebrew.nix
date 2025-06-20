@@ -29,8 +29,17 @@
       "yt-dlp"
       "ipatool"
       "pyenv"
+      "nvm"
+      "buf"
+      "protoc-gen-go-grpc"
+      "wireguard-tools"
+      "goreleaser/tap/goreleaser"
+      "zig"
+      "zls"
+      "wget"
     ];
     casks = [
+      "setapp"
       "neovide"
       "1password-cli"
       "git-credential-manager"
@@ -80,6 +89,10 @@
       "logi-options+"
       "ghostty"
       "tuist"
+      "utm"
+      "plex-media-server"
+      "lm-studio"
+      "claude"
     ];
 
     taps = [
@@ -95,6 +108,7 @@
       "tkhq/tap"
       "tuist/tuist"
       "majd/repo"
+      "goreleaser/tap"
     ];
   };
 }

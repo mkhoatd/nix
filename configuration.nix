@@ -6,10 +6,11 @@
   nixpkgs.config.allowUnfree = true;
   networking.computerName = "mackhoa";
   networking.hostName = "mackhoa";
+  # networking.knownNetworkServices = [ "Wi-Fi" ];
+  # networking.dns = [ "100.100.100.100" "8.8.8.8" "8.8.4.4" ];
   environment.systemPackages = [
     pkgs.vim
     pkgs.mkalias
-    pkgs.bun
     pkgs.lazygit
     pkgs.lazydocker
     pkgs.btop
@@ -20,13 +21,10 @@
     pkgs.mkalias
     pkgs.fh
     pkgs.nil
-    pkgs.cloudflared
-    pkgs.ngrok
-    pkgs.poetry
-    pkgs.zig_0_13
-    pkgs.zls
     pkgs.cmake
     pkgs.nixfmt
+    pkgs.nh
+    pkgs.grpc-gateway
   ];
 
   environment.etc."nix/nix.custom.conf".text = pkgs.lib.mkForce ''
@@ -54,6 +52,8 @@
       ShowStatusBar = true;
     };
   };
+
+  system.primaryUser = "mkhoatd";
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;
