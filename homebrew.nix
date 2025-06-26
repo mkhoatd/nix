@@ -33,10 +33,11 @@
       "buf"
       "protoc-gen-go-grpc"
       "wireguard-tools"
-      "goreleaser/tap/goreleaser"
       "zig"
       "zls"
       "wget"
+      "telnet"
+      "babelfish"
     ];
     casks = [
       "setapp"
@@ -48,7 +49,6 @@
       "adguard"
       "applite"
       "arc"
-      "cloudflare-warp"
       "discord"
       "firefox"
       "flowvision"
@@ -60,9 +60,7 @@
       "jetbrains-toolbox"
       "lookaway"
       "messenger"
-      "microsoft-auto-update"
       "microsoft-remote-desktop"
-      "microsoft-teams"
       "motrix"
       "mountain-duck"
       "netnewswire"
@@ -81,7 +79,6 @@
       "slack"
       "steam"
       "transmission"
-      "wezterm@nightly"
       "zalo"
       "zed"
       "zoom"
@@ -89,10 +86,15 @@
       "logi-options+"
       "ghostty"
       "tuist"
-      "utm"
       "plex-media-server"
       "lm-studio"
       "claude"
+      "goreleaser"
+      "teamviewer"
+      "google-cloud-sdk"
+      "sideloadly"
+      "vnc-viewer"
+      "mullvad-vpn"
     ];
 
     taps = [
@@ -109,6 +111,7 @@
       "tuist/tuist"
       "majd/repo"
       "goreleaser/tap"
+      "playcover/playcover"
     ];
   };
 }
